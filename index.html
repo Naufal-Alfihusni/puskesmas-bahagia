@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puskesman</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="icon" href="image/logo_title.png" type="png" />
+
+    <!-- icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="font-['Nunito_Sans'] bg-[#ECFFE6] overflow-x-hidden max-w-[100%]"
+  >
+    <header class="bg-[#0b5d1e] h-16 flex justify-center items-center z-40">
+      <nav class="flex justify-between items-center w-[96%] mx-auto text-white">
+        <div class="flex justify-center items-center w-40 h-12">
+          <a href="#">
+            <img src="image/logo.png" alt="logo" class="w-30 h-10" />
+          </a>
+        </div>
+        <div
+          class="nav-links lg:static absolute bg-[#0b5d1e] lg:min-h-fit min-h-[60vh] transform translate-x-full lg:transform-none right-0 top-[4rem] lg:w-auto w-full flex items-center px-5 transition-transform duration-300 ease-in-out opacity-0 lg:opacity-100 z-20"
+        >
+          <ul
+            class="flex lg:flex-row flex-col lg:items-center lg:gap-3 gap-4 lg:text-center text-left"
+          >
+            <li
+              class="flex justify-center items-center hover:text-[#0b5d1e] hover:bg-white w-20 h-8 text-center rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg active:scale-95 p-0"
+            >
+              <a href="#" class="w-20 h-8 flex justify-center items-center"
+                >Home</a
+              >
+            </li>
+            <li
+              class="flex justify-center items-center hover:text-[#0b5d1e] hover:bg-white w-20 h-8 text-center rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg active:scale-95"
+            >
+              <a
+                href="#layanan"
+                class="w-20 h-8 flex justify-center items-center"
+                >Layanan</a
+              >
+            </li>
+            <!-- <li
+              class="flex justify-center items-center hover:text-[#0b5d1e] hover:bg-white w-[140px] h-8 text-center rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg active:scale-95"
+            >
+              <a href="">Layanan Khusus</a>
+            </li> -->
+            <li
+              class="flex justify-center items-center hover:text-[#0b5d1e] hover:bg-white w-[140px] h-8 text-center rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg active:scale-95"
+            >
+              <a
+                href="#jadwal_praktek"
+                class="w-[140px] h-8 flex justify-center items-center"
+                >Jadwal Praktek</a
+              >
+            </li>
+            <li
+              class="flex justify-center items-center hover:text-[#0b5d1e] hover:bg-white w-20 h-8 text-center rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg active:scale-95"
+            >
+              <a
+                href="#kontak"
+                class="w-20 h-8 flex justify-center items-center"
+                >Kontak</a
+              >
+            </li>
+            <li
+              class="flex justify-center items-center hover:text-[#0b5d1e] hover:bg-white w-20 h-8 text-center rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg active:scale-95"
+            >
+              <a
+                href="/pages/tentang_kami.html"
+                class="w-20 h-8 flex justify-center items-center"
+                >Tentang</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex gap-3 w-40 justify-center items-center">
+          <button
+            type="submit"
+            class="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#139a43] hover:text-gray-50 text-[#0b5d1e] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+          >
+            <a href="/pages/registrasi.html" class="w-full"> Registrasi </a>
+          </button>
+
+          <ion-icon
+            name="menu-outline"
+            class="text-3xl cursor-pointer lg:hidden transition-transform transform hover:scale-110"
+            onclick="onToggleMenu(this)"
+            aria-label="Toggle navigation menu"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main class="h-auto mt-4 text-black">
+      <section
+        class="flex justify-center items-center lg:h-96 h-auto gap-10 lg:flex-row flex-col p-6 mb-4"
+      >
+        <div class="w-full lg:w-1/2 h-80 flex flex-col justify-center gap-4">
+          <div class="">
+            <h1 class="font-bold text-xl lg:text-2xl italic">
+              Selamat Datang Di Puskesman Bahagia....
+            </h1>
+          </div>
+          <div class="text-justify">
+            <p>
+              Puskesmas Bahagia adalah fasilitas kesehatan tingkat pertama yang
+              melayani masyarakat dan menangani masyarakat. Kami berkomitmen
+              untuk memberikan pelayanan kesehatan yang berkualitas, terjangkau,
+              dan mudah diakses.
+            </p>
+            <br />
+            <button
+              class="border border-blue-600 hover:text-blue-600 text-white rounded-full w-40 h-10 flex justify-center items-center hover:drop-shadow-lg hover:bg-white bg-blue-600 transition-all duration-300 ease-in-out active:scale-95"
+            >
+              <a href="/pages/tentang_kami.html" class="flex gap-2"
+                >Selengkapnya <i data-feather="arrow-right-circle"></i
+              ></a>
+            </button>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-1/3 h-72 flex flex-col justify-center gap-2 items-center rounded-2xl drop-shadow-2xl bg-green-50"
+        >
+          <div class="text-center text-lg font-semibold">
+            <h3>Tim Medis Siap Melayani</h3>
+          </div>
+          <div class="h-52 flex justify-center items-center gap-4">
+            <div class="lg:w-52 w-32 lg:h-52 h-32">
+              <img src="image/tim_medis.jpg" alt="" class="rounded-lg" />
+            </div>
+            <div class="lg:w-52 w-32 lg:h-52 h-32">
+              <img src="image/tim_medis2.jpg" alt="" class="rounded-lg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="mt-10 mb-10 bg-black opacity-0" />
+
+      <!-- layanan -->
+      <section
+        id="layanan"
+        class="flex justify-center items-center flex-col p-6 h-auto mt-10 mb-10"
+      >
+        <div class="flex justify-center items-center">
+          <h2 class="font-bold text-xl">Layanan Kami</h2>
+        </div>
+        <div
+          class="flex justify-center items-center gap-4 p-6 lg:flex-nowrap flex-wrap"
+        >
+          <div
+            class="flex flex-col gap-3 justify-start items-center p-4 rounded-xl bg-green-50 drop-shadow-2xl h-96"
+          >
+            <div
+              class="font-semibold text-lg flex flex-col justify-center items-center gap-2 mt-10"
+            >
+              <h3>Poli Gigi</h3>
+              <svg
+                fill="#000000"
+                height="40px"
+                width="40px"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                enable-background="new 0 0 512 512"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <path
+                        d="m298.6,468.1c0.3-108.2-30.2-166.4-42.6-166.4-12.4,0-42.6,58.2-42.6,166.2 0,9.4-3.9,18.2-10.8,24.4-11.3,10.1-29.1,11.4-41.8,2.8-58.4-39.5-108.2-112.2-133-194.3-26.4-87.4-21.5-173.1 13.2-229.1 20.2-32.6 49.1-53 83.6-58.9 27.7-4.7 57.4,0.2 87,14.6 27.4,13.3 61.4,13.3 88.9,0 29.5-14.4 59.3-19.4 86.9-14.6 34.5,5.9 63.4,26.3 83.6,58.9 34.7,56.1 39.6,141.7 13.2,229.1-24.8,82.1-74.5,154.9-133,194.3-18.5,12.5-52.7,7.9-52.6-27zm-167.1-415.1c-22.9,4.4-41.7,17.4-55.7,40.2-28.3,45.5-31.6,120.6-8.9,195.8 20.6,68.1 59.7,128.5 105.9,164.4 2.5-95.5 28.7-192.5 83.2-192.5 54.5,0 80.8,97.2 83.2,192.5 46.2-35.9 85.3-96.3 105.9-164.4 22.7-75.2 19.4-150.3-8.8-195.8-14.1-22.7-32.8-36.2-55.7-40.2-19.3-3.3-40.5,0.5-62.3,11.1-38.5,18.6-86,18.6-124.5,0-16.8-8.1-46.4-14.2-62.3-11.1z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="text-justify">
+              <p>
+                Senyum Sehat, Hidup Lebih Ceria! <br /><br />
+
+                Poli gigi kami menyediakan berbagai layanan untuk menjaga
+                kesehatan gigi dan mulut Anda. Mulai dari pemeriksaan rutin,
+                perawatan gigi berlubang, pencabutan gigi, hingga pemasangan
+                behel. Kunjungi kami dan dapatkan senyum yang
+                lebih percaya diri!
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-3 justify-start items-center p-4 rounded-xl bg-green-50 drop-shadow-2xl h-96"
+          >
+            <div
+              class="font-semibold text-lg flex flex-col justify-center items-center gap-2 mt-10"
+            >
+              <h3>Poli Umum</h3>
+              <svg
+                fill="#000000"
+                viewBox="-7.5 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[40px] h-[40px]"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>stethoscope</title>
+                  <path
+                    d="M16.56 13c0-1.32-1.080-2.4-2.4-2.4s-2.4 1.080-2.4 2.4c0 1.040 0.64 1.92 1.56 2.24v4.92c0 2.84-2.88 3.040-3.76 3.040s-3.76-0.2-3.76-3.040v-1.88c2.28-0.36 4.16-2.080 4.16-3.92v-4.96c0-0.84-0.48-1.6-1.2-1.96-0.64-0.32-1.24-0.4-1.72-0.2-0.44 0.16-0.64 0.6-0.48 1.040s0.64 0.68 1.040 0.52c0.040 0 0.16 0 0.44 0.12 0.16 0.080 0.28 0.28 0.28 0.48v4.92c0 0.92-1.4 2.32-3.32 2.32s-3.32-1.4-3.32-2.32v-4.92c0-0.2 0.12-0.4 0.28-0.48 0.24-0.12 0.4-0.12 0.44-0.12 0.44 0.16 0.92-0.080 1.080-0.52s-0.080-0.92-0.52-1.080c-0.52-0.2-1.12-0.12-1.72 0.2-0.76 0.36-1.2 1.12-1.2 1.96v4.92c0 1.88 1.88 3.56 4.16 3.92v1.88c0 3.24 2.72 4.72 5.4 4.72s5.4-1.44 5.4-4.72v-4.84c0.88-0.32 1.56-1.2 1.56-2.24zM14.16 12.24c0.4 0 0.76 0.32 0.76 0.76 0 0.4-0.32 0.76-0.76 0.76-0.4 0-0.76-0.32-0.76-0.76 0-0.4 0.32-0.76 0.76-0.76z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="text-justify">
+              <p>
+                Kesehatan Anda, Prioritas Kami! <br />
+                <br />
+
+                Poli umum kami menyediakan layanan kesehatan dasar yang
+                komprehensif untuk seluruh anggota keluarga. Mulai dari
+                pemeriksaan rutin, pengobatan penyakit ringan, hingga konsultasi
+                mengenai gaya hidup sehat. Kunjungi kami dan rasakan pelayanan
+                kesehatan yang berkualitas.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-3 justify-start items-center p-4 rounded-xl bg-green-50 drop-shadow-2xl h-96"
+          >
+            <div
+              class="font-semibold text-lg flex flex-col justify-center items-center gap-2 mt-10"
+            >
+              <h3>Poli Anak & Ibu</h3>
+              <svg
+                fill="#000000"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 563.6 563.6"
+                xml:space="preserve"
+                class="w-[40px] h-[40px]"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <circle cx="190.184" cy="43.854" r="43.854"></circle>
+                      <path
+                        d="M216.992,179.364l14.707,30.06c1.54,3.304,3.916,6.149,6.899,8.248l36.84,26.02l29.558,21.186 c3.456,2.481,7.415,3.739,11.369,3.873c6.708,0.229,13.397-2.792,17.596-8.654c6.679-9.319,4.542-22.286-4.777-28.965 l-10.279-7.368c-0.865-0.908-1.816-1.759-2.883-2.51l-48.836-34.501l-33.569-68.381c-3.414-7.33-10.547-11.642-18.106-11.948 c-0.163-0.033-0.354-0.11-0.492-0.11h-64.294c-5.102,0-9.051,4.169-8.773,9.261l-5.556,107.851 c0.277,5.092-1.439,12.957-3.811,17.476L66.33,367.075c-2.372,4.519-0.139,8.215,4.963,8.215h41.735v38.508L38.097,518.297 c-6.718,9.366-4.566,22.405,4.8,29.118c3.682,2.639,7.932,3.911,12.14,3.911c6.498,0,12.905-3.027,16.979-8.712l78.838-109.954 c2.539-3.548,3.911-7.799,3.911-12.159v-45.216h10.212l52.646,161.63c2.874,8.812,11.05,14.411,19.837,14.411 c2.142,0,4.322-0.33,6.469-1.033c10.958-3.566,16.949-15.343,13.383-26.302L208.878,375.29h32.459 c5.102,0,7.698-3.863,5.776-8.588l-51.15-125.45c-1.927-4.724-1.754-12.378,0.378-17.016L216.992,179.364z"
+                      ></path>
+                      <path
+                        d="M514.28,513.367c14.593,0,16.893-7.344,14.105-13.569c-0.718-1.602-51.05-112.718-51.882-114.463 c-0.822-1.716-2.328-6.307-10.734-6.307c-5.397,0-9.931,3.361-11.24,8.301c-0.354,1.334-1.492,2.472-2.878,2.472h-36.28 c-1.382,0-3.175-0.898-4.021-1.989c-0.344-0.439-1.945-7.291-8.816-7.291c0,0-18.097,0-20.215,0 c-8.621,0-13.029,2.988-14.971,11.504l-21.243,72.034c-0.358,1.334-1.688,2.219-3.069,2.108c0,0-12.465,0-14.783,0 c-8.037,0-14.282,5.785-14.282,13.822c0,0.526-1.516,23.003-1.529,28.626c-0.005,1.382-0.416,3.547-0.822,4.867 c-1.114,3.604-1.717,7.435-1.717,11.403c0,21.382,17.332,38.714,38.714,38.714s38.714-17.863,38.714-39.245 c0-3.271-0.406-5.852-1.172-9.467c-0.287-1.353,0.483-2.448,1.731-2.448c1.247,0,2.739,1.014,3.332,2.262 c0,0,16.3,34.659,16.309,34.722c0.015,0.067,0.607,1.085,1.54,2.104c2.496,2.735,6.058,4.442,10.017,4.442 c7.545,0,13.665-5.977,13.665-13.521c0-0.67-0.048-1.281-0.144-1.884c-0.163-1.033-11.557-25.862-11.557-25.862 c-0.593-1.248,0.043-2.262,1.43-2.262h18.102c1.382,0,2.271,1.101,1.994,2.453c-0.712,3.467-1.09,5.666-1.09,8.707 c0,19.847,16.084,36.193,35.931,36.193c19.843,0,35.932-15.955,35.932-35.797c0-2.754-0.312-5.398-0.899-7.956 C512.129,514.683,512.898,513.367,514.28,513.367z M467.276,429.896c-29.64,0-49.62,37.973-63.845,37.973 c0,0-3.002,0.158-4.169-0.053c-1.162-0.21-1.745-1.439-1.367-2.769l14.425-49.051c0.368-1.334,1.74-2.424,3.122-2.424h46.335 c1.382,0,2.831,0.803,3.232,1.793l0.727,1.798l3.247,10.012C469.408,428.49,468.624,429.581,467.276,429.896z"
+                      ></path>
+                      <circle cx="394.759" cy="338.531" r="33.918"></circle>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="text-justify">
+              <p>
+                Ibu Sehat, Anak Hebat, Keluarga Bahagia<br /><br />
+
+                Percayakan kesehatan ibu dan anak Anda kepada kami. Tim medis
+                kami yang berpengalaman dan ramah siap memberikan perawatan
+                terbaik. Nikmati layanan konsultasi menyusui, deteksi dini
+                tumbuh kembang, dan program parenting yang bermanfaat.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-3 justify-start items-center p-4 rounded-xl bg-green-50 drop-shadow-2xl h-96"
+          >
+            <div
+              class="font-semibold text-lg flex flex-col justify-center items-center gap-2 mt-10"
+            >
+              <h3>Maternitas</h3>
+              <svg
+                height="40px"
+                width="40px"
+                version="1.1"
+                id="_x32_"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                xml:space="preserve"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <style type="text/css">
+                    .st0 {
+                      fill: #000000;
+                    }
+                  </style>
+                  <g>
+                    <path
+                      class="st0"
+                      d="M254.962,145.192c-38.209,36.682-47.168,80.782-47.168,80.782s-78.16,49.137-47.591,157.646h91.854 l13.549,102.607C267.553,500.985,280.129,512,295.004,512h5.189c16.379,0,29.656-13.273,29.656-29.652V383.62h12.053 c0,0,0-189.14,0-233.837C341.902,114.63,290.042,111.517,254.962,145.192z"
+                    ></path>
+                    <path
+                      class="st0"
+                      d="M305.398,0c-29.542,0-53.493,23.955-53.493,53.493c0,29.546,23.951,53.493,53.493,53.493 c29.542,0,53.49-23.947,53.49-53.493C358.888,23.955,334.94,0,305.398,0z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="text-justify">
+              <p>
+                Yuk, konsultasikan kehamilan Anda dengan dokter spesialis kami!
+                <br />
+                <br />
+
+                Poliklinik Maternitas kami memberikan layanan lengkap untuk
+                kesehatan ibu hamil, bersalin, nifas, hingga bayi baru lahir.
+                Dengan tim medis yang berpengalaman dan fasilitas modern, kami
+                berkomitmen untuk memberikan perawatan terbaik bagi
+                Anda dan buah hati.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="mt-10 mb-10 bg-black opacity-0" />
+
+      <!-- dokter -->
+      <section
+        class="flex justify-center items-center flex-col p-6 h-auto mt-10 mb-10 gap-4"
+      >
+        <div class="font-bold text-xl">
+          <h2>Dokter</h2>
+        </div>
+        <div
+          class="flex justify-center items-center gap-5 p-6 lg:flex-nowrap flex-wrap"
+        >
+          <div
+            class="card bg-green-50 w-72 h-96 shadow-xl text-black drop-shadow-lg"
+          >
+            <figure>
+              <img src="/image/NAUFAL ALFIHUSNI.JPG" alt="naufal alfihusni" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Dr. Naufal Alfihusni</h2>
+              <p>Dokter Umum</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary rounded-full">
+                  <a
+                    href="pages/profile_alfi.html"
+                    class="h-[3rem] flex justify-center items-center"
+                  >
+                    <i data-feather="arrow-right-circle" class="text-white"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card bg-green-50 w-72 h-96 shadow-xl text-black drop-shadow-lg"
+          >
+            <figure>
+              <img src="image/dika.jpg" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Dr. Muhammad Hardika Juninho</h2>
+              <p>Dokter Gigi</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary rounded-full">
+                  <a
+                    href="pages/profile_dika.html"
+                    class="h-[3rem] flex justify-center items-center"
+                  >
+                    <i data-feather="arrow-right-circle" class="text-white"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card bg-green-50 w-72 h-96 shadow-xl text-black drop-shadow-lg"
+          >
+            <figure>
+              <img src="/image/lutfi.jpg" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Dr. M. Luthfi Sahrul Fadilah</h2>
+              <p>Dokter Ibu & Anak</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary rounded-full">
+                  <a
+                    href="pages/profile_lutfi.html"
+                    class="h-[3rem] flex justify-center items-center"
+                  >
+                    <i data-feather="arrow-right-circle" class="text-white"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card bg-green-50 w-72 h-96 shadow-xl text-black drop-shadow-lg"
+          >
+            <figure>
+              <img src="image/keyla.jpg" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Dr. Keyla Farrelia</h2>
+              <p>Bidan</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary rounded-full">
+                  <a
+                    href="pages/profile_keyla.html"
+                    class="h-[3rem] flex justify-center items-center"
+                  >
+                    <i data-feather="arrow-right-circle" class="text-white"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="mt-10 mb-10 bg-black opacity-0" />
+
+      <!-- jadwal dokter -->
+      <section
+        class="flex justify-center items-center flex-col p-6 h-auto mt-10 mb-10 gap-4"
+        id="jadwal_praktek"
+      >
+        <div class="font-bold text-xl">
+          <h2>Jadwal Prakter Dokter</h2>
+        </div>
+        <div>
+          <table
+            class="text-center border-collapse border border-[#0b5d1e] table-auto"
+          >
+            <thead class="bg-[#0b5d1e] text-white">
+              <tr>
+                <th class="border-t border-[#0b5d1e] lg:w-80 w-auto h-10">
+                  Dokter
+                </th>
+                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Senin</th>
+                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Selasa</th>
+                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Rabu</th>
+                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Kamis</th>
+                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Jumat</th>
+                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Sabtu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="border border-[#0b5d1e] text-left h-10 p-3">
+                  Dr. Naufal Alfihusni
+                </th>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+              </tr>
+              <tr>
+                <th
+                  class="border border-[#0b5d1e] text-left bg-green-100 h-10 p-3"
+                >
+                  Dr. Muhammad Hardika Juninho
+                </th>
+                <td class="border-t border-[#0b5d1e] bg-green-100">
+                  8.00-17.00
+                </td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">-</td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">
+                  8.00-17.00
+                </td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">
+                  8.00-17.00
+                </td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">-</td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">
+                  8.00-17.00
+                </td>
+              </tr>
+              <tr>
+                <th class="border border-[#0b5d1e] text-left h-10 p-3">
+                  Dr. M. Luthfi Sahrul Fadilah
+                </th>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">-</td>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                <td class="border-t border-[#0b5d1e]">-</td>
+              </tr>
+              <tr>
+                <th
+                  class="border border-[#0b5d1e] text-left bg-green-100 h-10 p-3"
+                >
+                  Dr. Keyla Farrelia
+                </th>
+                <td class="border-t border-[#0b5d1e] bg-green-100">-</td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">
+                  8.00-17.00
+                </td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">
+                  8.00-17.00
+                </td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">-</td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">
+                  8.00-17.00
+                </td>
+                <td class="border-t border-[#0b5d1e] bg-green-100">
+                  8.00-17.00
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <hr class="mt-10 mb-10 bg-black opacity-0" />
+
+      <section
+        class="flex justify-center items-center flex-col p-6 h-auto mt-10 mb-10 gap-4"
+        id="kontak"
+      >
+        <div class="font-bold text-xl">
+          <h2>Kontak</h2>
+        </div>
+        <div
+          class="flex lg:flex-row flex-col justify-center items-center gap-4 p-6"
+        >
+          <div class="w-auto h-auto">
+            <img
+              src="image/ruangan.jpg"
+              alt=""
+              class="rounded-xl lg:w-96 w-auto lg:h-96 h-auto"
+            />
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-start gap-3">
+              <i data-feather="map-pin" class="text-black"></i>
+              <p class="lg:w-auto w-72">
+                Puskesmas Bahagia
+                <br />
+                Jl. Sejahtera No. 45, Kelurahan Apa Adanya, Kecamatan Pancoran
+                Mas, Kota Depok, Jawa Barat 16436.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-feather="mail" class="text-black"></i>
+              <p>puskesmasbahagia@depok.go.id</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-feather="phone-call" class="text-black"></i>
+              <p>0-123-4567-89</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-feather="twitter" class="text-black"></i>
+              <p>@PuskBahagiaDepok</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-feather="youtube" class="text-black"></i>
+              <p>Puskesmas Bahagia Depok</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-feather="facebook" class="text-black"></i>
+              <p>Puskesmas Bahagia Depok</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-base-200 text-base-content p-10 mt-10">
+      <aside>
+        <img src="image/logo.png" alt="" class="w-48 h-14" />
+        <p>
+          <br />
+          Kelompok 1
+          <br />
+          Project Kelompok UAS Pemrograman Web 1
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title">Menu</h6>
+        <a class="link link-hover text-white" href="#layanan">Layanan</a>
+        <a class="link link-hover text-white" href="#jadwal_praktek"
+          >Jadwal Prakter</a
+        >
+        <a class="link link-hover text-white" href="#kontak">Kontak</a>
+        <a class="link link-hover text-white" href="#tentang_kami"
+          >Tentang Kami</a
+        >
+      </nav>
+      <nav>
+        <h6 class="footer-title">Jam Operasi</h6>
+        <p class="text-white">Senin-Sabtu: 7.00-16.00 WIB</p>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Social</h6>
+        <div class="grid grid-flow-col gap-4 text-white">
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+              ></path>
+            </svg>
+          </a>
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+              ></path>
+            </svg>
+          </a>
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </footer>
+
+    <footer class="footer footer-center bg-base-300 text-base-content p-4">
+      <aside>
+        <p>Copyright © 2025 - All right reserved by Kelompok 1</p>
+      </aside>
+    </footer>
+
+    <script src="src/toggle.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
