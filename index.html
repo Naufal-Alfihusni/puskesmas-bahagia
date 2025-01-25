@@ -26,7 +26,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="font-['Nunito_Sans'] bg-[#ECFFE6] overflow-x-hidden w-[100%]">
+  <body class="font-['Nunito_Sans'] bg-[#ECFFE6] overflow-x-hidden max-w-full">
     <header class="bg-[#0b5d1e] h-16 flex justify-center items-center z-40">
       <nav class="flex justify-between items-center w-[96%] mx-auto text-white">
         <div class="flex justify-center items-center w-40 h-12">
@@ -472,7 +472,7 @@
         <div class="font-bold text-xl">
           <h2>Jadwal Prakter Dokter</h2>
         </div>
-        <div>
+        <div class="overflow-x-auto">
           <table
             class="text-center border-collapse border border-[#0b5d1e] table-auto"
           >
@@ -684,7 +684,9 @@
       </nav>
     </footer>
 
-    <footer class="footer footer-center bg-gray-900 text-white p-4">
+    <footer
+      class="footer footer-center bg-gray-900 text-white p-4 max-w-[100%]"
+    >
       <aside>
         <p>Copyright © 2025 - All right reserved by Kelompok 1</p>
       </aside>
