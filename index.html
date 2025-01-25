@@ -26,7 +26,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="font-['Nunito_Sans'] bg-[#ECFFE6] overflow-x-hidden max-w-full">
+  <body class="font-['Nunito_Sans'] bg-[#ECFFE6] overflow-x-hidden">
     <header class="bg-[#0b5d1e] h-16 flex justify-center items-center z-40">
       <nav class="flex justify-between items-center w-[96%] mx-auto text-white">
         <div class="flex justify-center items-center w-40 h-12">
@@ -83,7 +83,7 @@
               class="flex justify-center items-center hover:text-[#0b5d1e] hover:bg-white w-20 h-8 text-center rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg active:scale-95"
             >
               <a
-                href="/pages/tentang_kami.html"
+                href="pages/tentang_kami.html"
                 class="w-20 h-8 flex justify-center items-center"
                 >Tentang</a
               >
@@ -470,87 +470,96 @@
         id="jadwal_praktek"
       >
         <div class="font-bold text-xl">
-          <h2>Jadwal Prakter Dokter</h2>
+          <h2>Jadwal Praktek Dokter</h2>
         </div>
-        <div class="overflow-x-auto">
+        <!-- Tambahkan wrapper untuk membuat tabel scrollable -->
+        <div class="overflow-x-auto w-full">
           <table
-            class="text-center border-collapse border border-[#0b5d1e] table-auto"
+            class="table-auto w-full border-collapse border border-[#0b5d1e] text-center"
           >
             <thead class="bg-[#0b5d1e] text-white">
               <tr>
                 <th class="border-t border-[#0b5d1e] lg:w-80 w-auto h-10">
                   Dokter
                 </th>
-                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Senin</th>
-                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Selasa</th>
-                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Rabu</th>
-                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Kamis</th>
-                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Jumat</th>
-                <th class="border-t border-[#0b5d1e] lg:w-36 w-auto">Sabtu</th>
+                <th class="px-4 py-2 border border-[#0b5d1e]">Senin</th>
+                <th class="px-4 py-2 border border-[#0b5d1e]">Selasa</th>
+                <th class="px-4 py-2 border border-[#0b5d1e]">Rabu</th>
+                <th class="px-4 py-2 border border-[#0b5d1e]">Kamis</th>
+                <th class="px-4 py-2 border border-[#0b5d1e]">Jumat</th>
+                <th class="px-4 py-2 border border-[#0b5d1e]">Sabtu</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th class="border border-[#0b5d1e] text-left h-10 p-3">
+                <td class="px-4 py-2 border border-[#0b5d1e] text-left">
                   Dr. Naufal Alfihusni
-                </th>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
+                </td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
               </tr>
               <tr>
-                <th
-                  class="border border-[#0b5d1e] text-left bg-green-100 h-10 p-3"
+                <td
+                  class="px-4 py-2 border border-[#0b5d1e] text-left bg-green-100"
                 >
                   Dr. Muhammad Hardika Juninho
-                </th>
-                <td class="border-t border-[#0b5d1e] bg-green-100">
+                </td>
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
                   8.00-17.00
                 </td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">-</td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
+                  -
+                </td>
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
                   8.00-17.00
                 </td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
                   8.00-17.00
                 </td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">-</td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
+                  -
+                </td>
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
                   8.00-17.00
                 </td>
               </tr>
               <tr>
-                <th class="border border-[#0b5d1e] text-left h-10 p-3">
+                <td class="px-4 py-2 border border-[#0b5d1e] text-left">
                   Dr. M. Luthfi Sahrul Fadilah
-                </th>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">-</td>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">8.00-17.00</td>
-                <td class="border-t border-[#0b5d1e]">-</td>
+                </td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">-</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">8.00-17.00</td>
+                <td class="px-4 py-2 border border-[#0b5d1e]">-</td>
               </tr>
               <tr>
-                <th
-                  class="border border-[#0b5d1e] text-left bg-green-100 h-10 p-3"
+                <td
+                  class="px-4 py-2 border border-[#0b5d1e] text-left bg-green-100"
                 >
                   Dr. Keyla Farrelia
-                </th>
-                <td class="border-t border-[#0b5d1e] bg-green-100">-</td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">
+                </td>
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
+                  -
+                </td>
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
                   8.00-17.00
                 </td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
                   8.00-17.00
                 </td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">-</td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
+                  -
+                </td>
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
                   8.00-17.00
                 </td>
-                <td class="border-t border-[#0b5d1e] bg-green-100">
+                <td class="px-4 py-2 border border-[#0b5d1e] bg-green-100">
                   8.00-17.00
                 </td>
               </tr>
